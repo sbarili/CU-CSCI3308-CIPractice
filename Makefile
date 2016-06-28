@@ -11,6 +11,10 @@ PKG_CHECK_LIBS = `pkg-config --libs check`
 
 .PHONY: all dep clean
 
+#doing this will autmatically run the geo_test 
+test: geometry_test
+	./geometry_test
+	
 all: geometry_test
 
 geometry_test: geometry_test.o geometry.o
